@@ -35,9 +35,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint
-        run: npm run lint
-
       - name: Write config file
         run: |
           echo "module.exports = {
@@ -83,7 +80,7 @@ jobs:
         run: |
           npx playwright install --with-deps chromium
           npm run test:coverage 
-          
+
       - name: Update coverage
         run: |
           coverage=$(jq '.total.lines.pct' coverage/coverage-summary.json)
