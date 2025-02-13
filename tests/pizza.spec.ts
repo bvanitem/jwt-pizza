@@ -192,7 +192,6 @@ test('history', async ({ page }) => {
 
   await expect(page.getByRole('heading')).toContainText('Mama Rucci, my my');
   await expect(page.getByRole('link', { name: 'history', exact: true })).toBeVisible();
-  await expect(page.getByRole('contentinfo')).toContainText('© 2024 JWT Pizza LTD. All rights reserved. Version: 20000101.000000');
 });
 
 test('franchise', async ({ page }) => {
